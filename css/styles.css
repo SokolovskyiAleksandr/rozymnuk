@@ -219,6 +219,16 @@ a {
   line-height: 1.71;
   color: var(--color-text);
 }
+.about-im {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--element-margin);
+  background: #f5f4fa;
+  border-radius: 4px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 /*work виды работ*/
 .work {
   padding-bottom: var(--section-padding);
