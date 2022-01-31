@@ -306,6 +306,44 @@ a {
 .team-social-item + .team-social-item {
   margin-left: 10px;
 }
+.clients-container {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.clients-name {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.16;
+  color: var(--color-h);
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients-link {
+  color: #afb1b8;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--color-hf-logo);
+  border: 1px solid var(--color-hf-logo);
+}
+.clients-item + .clients-item {
+  margin-left: var(--element-margin);
+}
+.clients-icon {
+  fill: currentColor;
+}
 /* portfolio*/
 /* button portfolio*/
 .portfolio {
@@ -371,6 +409,8 @@ a {
 }
 /*Footer*/
 .footer {
+  display: flex;
+  align-items: flex-start;
   background-color: var(--color-hero-footer);
   padding-top: var(--footer-paddingtb);
   padding-bottom: var(--footer-paddingtb);
@@ -395,4 +435,48 @@ a {
 }
 .footer span {
   color: var(--primary-white);
+}
+.footer-join {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white);
+  margin-bottom: 20px;
+}
+.footer-link {
+  color: var(--primary-white);
+  margin-left: 70px;
+}
+
+.footer-social-list {
+  display: flex;
+}
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-white);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--color-hf-logo);
+  color: var(--primary-white);
+}
+.footer-social-icon {
+  fill: currentColor;
+}
+
+.footer-social-item + .footer-social-item {
+  margin-left: 10px;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
 }
