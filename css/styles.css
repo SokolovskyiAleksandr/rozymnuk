@@ -391,6 +391,7 @@ a {
   flex-wrap: wrap;
 }
 .portfolio-link {
+  display: block;
   flex-basis: calc(100% / 3 - var(--element-margin));
   margin-left: var(--element-margin);
   margin-bottom: var(--element-margin);
@@ -415,7 +416,10 @@ a {
 }
 .portfolio-des {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  border-top: none;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 /*Footer*/
 .footer {
