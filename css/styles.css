@@ -90,9 +90,7 @@ a {
 .list {
   list-style: none;
 }
-.list .header-link.current {
-  color: var(--color-hf-logo);
-}
+
 /*header*/
 .header {
   border-bottom: 1px solid #ececec;
@@ -148,6 +146,7 @@ a {
 .header-link:focus {
   color: var(--color-hf-logo);
 }
+
 .header-cont {
   display: flex;
   align-items: center;
@@ -165,7 +164,19 @@ a {
   fill: currentColor;
   margin-right: 10px;
 }
-
+.current {
+  color: var(--color-hf-logo);
+  position: relative;
+}
+.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: var(--color-hf-logo);
+  left: 0;
+  bottom: -32px;
+}
 /*hero*/
 .hero {
   padding-top: 200px;
@@ -395,11 +406,39 @@ a {
   flex-basis: calc(100% / 3 - var(--element-margin));
   margin-left: var(--element-margin);
   margin-bottom: var(--element-margin);
+  box-shadow: none;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-link:focus,
+.portfolio-link:hover .portfolio-top-text {
+  transform: translateY(0);
+}
+.portfolio-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-top-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  line-height: 1.56;
+  font-weight: 400;
+  color: var(--primary-white);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  height: 100%;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-title {
   font-size: 18px;
@@ -493,4 +532,42 @@ a {
 .footer-container {
   display: flex;
   align-items: baseline;
+}
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+}
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--primary-white);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.close-buttom {
+  background-color: var(--primary-white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.close-buttom:hover {
+  cursor: pointer;
+  background-color: var(--color-hf-logo);
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: 0;
+  visibility: hidden;
 }
