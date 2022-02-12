@@ -676,12 +676,15 @@ a {
   text-align: center;
   margin-bottom: 30px;
 }
+.form-field {
+  margin-bottom: 28px;
+}
 .modal-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 28px;
+
   padding-left: 42px;
   outline: none;
   transition-property: border-color;
@@ -693,9 +696,72 @@ a {
   border-color: var(--color-hf-logo);
   cursor: pointer;
 }
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon {
+  fill: var(--color-hf-logo);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .modal-input::placeholder {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.modal-wrap {
+  position: relative;
+}
+.modal-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.modal-check-text {
+  line-height: 1.71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+}
+.checkbox-link {
+  line-height: 1.71;
+  display: flex;
+  align-items: center;
+  color: var(--color-hf-logo);
+  position: relative;
+}
+.checkbox-link::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: var(--color-hf-logo);
+  left: 0;
+  bottom: 5px;
+}
+.modal-check-text:hover {
+  cursor: pointer;
+}
+
+.modal-check-text span {
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--color-h);
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+.modal-check-icon {
+  fill: transparent;
+}
+.modal-check:checked + .modal-check-text > span {
+  background-color: var(--color-hf-logo);
+  border: none;
+}
+.modal-check:checked + .modal-check-text svg {
+  fill: var(--primary-white);
 }
 .modal-button-submit {
   width: 200px;
@@ -743,9 +809,9 @@ a {
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
-.modal-text:hover {
-  cursor: pointer;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-text::placeholder {
   letter-spacing: 0.01em;
@@ -765,9 +831,6 @@ a {
   position: absolute;
   top: 8px;
   right: 8px;
-  transition-property: color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-buttom:hover {
   cursor: pointer;
@@ -777,6 +840,9 @@ a {
 }
 .close-buttom:hover .close-icon {
   fill: var(--color-hf-logo);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
   opacity: 0;
