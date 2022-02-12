@@ -332,7 +332,7 @@
                 </ul>
             </address></div>
             <div class="footer-link">
-                <h2 class="footer-join">присоединяйтесь</h2>
+                <p class="footer-join">присоединяйтесь</p>
         <ul class="footer-social-list list">
             <li class="footer-social-item">
                 <a href="" class="footer-social-link">
@@ -363,16 +363,48 @@
                 </a>
             </li>
         </ul>
+    </div>
+    <div class="footer-sub">
+        <form class="footer-form">
+        <p class="footer-join">Подпишитесь на рассылку</p>
+        <div class="form-email">
+            <label class="footer-label" for="email"></label>
+            <input type="email" name="user-email" id="email" class="footer-input" placeholder="E-mail">
+        <button type="submit" class="submit-btn">
+            Подписаться
+            <svg class="send-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+        </button>
+        </div></form>
     </div></div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <!--Модалка-->
+    <div class="backdrop" data-modal>
         <div class="modal">
         <button type="button" class="close-buttom" data-modal-close>
-            <svg width="11" height="11"> 
+            <svg class="close-icon" width="11" height="11"> 
                 <use href="images/icons.svg#icon-close"></use>
             </svg>
         </button> 
-        </div>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form class="modal-form" autocomplete="on">
+            <div class="form-field"><label class="modal-label" for="user-name">Имя </label>
+            <input type="text" name="user-name" id="user-name" class="modal-input" required autofocus>
+            </div>
+            <div class="form-field"><label class="modal-label" for="user-tel"> Телефон</label>
+            <input type="tel" name="user-tel" id="user-tel" class="modal-input" required>
+            </div>
+            <div class="form-field"><label class="modal-label" for="user-email">Почта</label>
+            <input type="email" name="user-email" id="user-email" class="modal-input" required>
+            </div>
+            <div class="form-field">
+                <label class="modal-label" for="user-text">Комментарий </label>
+            <textarea name="user-text" id="user-text" placeholder="Введите текст" class="modal-text"></textarea>
+            </div>
+            <button type="submit" class="modal-button-submit">Отправить</button>
+        </form>
+    </div>
     </div>
     <script src="./js/modal.js"></script>
 </body>
