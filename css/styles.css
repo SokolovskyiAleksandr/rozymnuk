@@ -539,7 +539,7 @@ a {
 }
 .footer-link {
   color: var(--primary-white);
-  width: 50%;
+  margin-left: 70px;
 }
 
 .footer-social-list {
@@ -641,10 +641,7 @@ a {
   display: flex;
 }
 .footer-sub {
-  width: calc(100% / 2 - 15px);
-}
-.footer-add {
-  width: calc(100% / 2 + 15px);
+  margin-left: auto;
 }
 /*Modal*/
 .backdrop {
@@ -677,7 +674,7 @@ a {
   margin-bottom: 30px;
 }
 .form-field {
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 .modal-input {
   width: 100%;
